@@ -1,0 +1,27 @@
+--Create a Stationery Store Database
+
+CREATE TABLE MARBAS (id INTEGER PRIMARY KEY, Name TEXT, Price REAL, Quantity INTEGER, Location TEXT);
+
+INSERT INTO MARBAS VALUES (1, "Crow Pin", 3.5, 45,"Downstairs");
+INSERT INTO MARBAS VALUES (2, "Death Card Pin",3.5,30,"Downstairs");
+INSERT INTO MARBAS VALUES (3, "Bound Pin", 3.5,12,"Upstairs");
+INSERT INTO MARBAS VALUES (4, "Dancing Skeleton Pin",4,22,"Downstairs");
+INSERT INTO MARBAS VALUES (6, "Reusable Lilac Beeswax",17.5,20,"Downstairs");
+INSERT INTO MARBAS VALUES (8, "Reusable Yellow Marble Beeswax",17.5,5,"Upstairs");
+INSERT INTO MARBAS VALUES (9, "Reusable Wildflower Beeswax",17.5,16,"Upstairs");
+INSERT INTO MARBAS VALUES (11, "Emmot Pens Muted Greens",8,52, "Downstairs");
+INSERT INTO MARBAS VALUES (12, "Emmot Pens Dark",8,43,"Upstairs");
+INSERT INTO MARBAS VALUES (13, "Anatomy Notebook",12,26,"Downstairs");
+INSERT INTO MARBAS VALUES (14, "Space Notebook",12,6,"Downstairs");
+
+--Display total database
+SELECT * FROM MARBAS;
+
+--Display database ordered by price.
+SELECT * FROM MARBAS ORDER BY Price;
+
+--What products have less than 35 in stock?
+SELECT * FROM MARBAS WHERE Quantity <35 ORDER BY Quantity;
+
+--Show total stock of database.
+SELECT SUM (Quantity) From MARBAS
